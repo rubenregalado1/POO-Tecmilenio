@@ -10,4 +10,13 @@ public class CALCULADORA {
     public static int sumarNumeros(int operando1,int operando2){
         return operando1+operando2;
     }
+    public static int restarNumeros(int operando1,int operando2){
+        return operando1-operando2;
+    }
+    public static int dividirNumeros(int operando1,int operando2){
+        return operando1/operando2;
+    }
+    public static int multiplicarNumeros(int operando1,int operando2){
+        return operando1*operando2;
+    }
 }

@@ -15,20 +15,38 @@ public class CLI {
         Scanner scanner = new Scanner(System.in);
 
         int option = scanner.nextInt();
-        int option = scanner.nextLine();
+        scanner.nextLine();
+
+        System.out.println("Introduzca el primer valor");
 
         int operando1 = scanner.nextInt();scanner.nextLine();
+
+        System.out.println("Introduzca su segundo valor");
         int operando2 = scanner.nextInt();scanner.nextLine();
-        int resultado;
+        int resultado=-1;
+        String operacion ="";
 
 
         switch (option){
             case 1:
-                CALCULADORA.sumarNumeros(operando1,operando2);
+                resultado = CALCULADORA.sumarNumeros(operando1,operando2);
+                operacion = "+";
+                break;
+            case 2:
+                resultado = CALCULADORA.restarNumeros(operando1,operando2);
+                operacion = "-";
+                break;
+            case 3:
+                resultado = CALCULADORA.dividirNumeros(operando1,operando2);
+                operacion = "/";
+                break;
+            case 4:
+                resultado = CALCULADORA.multiplicarNumeros(operando1,operando2);
+                operacion = "*";
                 break;
         }
 
-        System.out.println("El resultado de la operación es");
+        System.out.printf("El resultado de la operación %d %s %d = %d",operando1,operacion,operando2,resultado);
     }
 
 }
